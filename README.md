@@ -21,12 +21,12 @@ _Delpoyed URL:_ TBD
 
 ```
 {
-    	restaurant_id: integer, automatically generated
-        name: string, required
-    	city: string, required
-    	address: string, required
-   	description: string, required
-        been_there: boolean default(false)
+    restaurant_id: integer, automatically generated
+    name: string, required
+    city: string, required
+    address: string, required
+    description: string, required
+    been_there: boolean default(false)
 }
 ```
 
@@ -56,12 +56,12 @@ _Delpoyed URL:_ TBD
 
 ### Restaurant Routes
 
-| Method | Endpoint          | Token Required | Description                                                                                |
-| ------ | ----------------- | -------------- | ------------------------------------------------------------------------------------------ |
-| GET    | `/restaurant`     | yes            | Returns all restaurants                                                                    |
-| POST   | `/restaurant`     | yes            | Required: name <br> Adds a restaurant to the database                                      |
-| POST   | `/restaurant/:id` | yes            | Required: name. city, address, description, city_id <br> Adds a restaurant to the database |
-| GET    | `/restaurant/:id` | yes            | Returns a restaurant by id                                                                 |
+| Method | Endpoint          | Token Required | Description                                                                               |
+| ------ | ----------------- | -------------- | ----------------------------------------------------------------------------------------- |
+| GET    | `/restaurant`     | yes            | Returns all restaurants                                                                   |
+| POST   | `/restaurant`     | yes            | Requires name <br> Adds a restaurant to the database                                      |
+| POST   | `/restaurant/:id` | yes            | Requires name, city, address, description, city_id <br> Adds a restaurant to the database |
+| GET    | `/restaurant/:id` | yes            | Returns a restaurant by id                                                                |
 
 ### Cities Routes
 
