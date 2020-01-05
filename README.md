@@ -1,6 +1,6 @@
 # BE-UI-Restuarant-Passport-4
 
-_Delpoyed URL:_
+_Delpoyed URL:_ TBD
 
 ## Models
 
@@ -8,9 +8,9 @@ _Delpoyed URL:_
 
 ```
 {
-    id: integer, automatically generated
-    username: string, required
-    password: string, required
+	id: integer, automatically generated
+	username: string, required
+	password: string, required
     name: string, required
     email: string, required
     city: string, required
@@ -25,7 +25,8 @@ _Delpoyed URL:_
         name: string, required
     	city: string, required
     	address: string, required
-   	description: string, required
+   	    description: string, required
+        been_there: boolean default(false)
 }
 ```
 
@@ -70,6 +71,11 @@ _Delpoyed URL:_
 
 ### Passport Routes
 
-| Method | Endpoint         | Token Required | Description                     |
-| ------ | ---------------- | -------------- | ------------------------------- |
-| GET    | `/user/passport` | yes            | Returns all visited restaurants |
+| Method | Endpoint                        | Token Required | Description                         |
+| ------ | ------------------------------- | -------------- | ----------------------------------- |
+| GET    | `/user/passport`                | yes            | Returns all visited restaurants     |
+| GET    | `/user/passport/restaurant/:id` | yes            | Returns specific visited restaurant |
+| POST   | `/user/passport/restaurant/:id` | yes            | Adds visited restaurant             |
+| PUT    | `/user/passport/restaurant/:id` | yes            | Updates specific visited restaurant |
+| DELETE | `/user/passport/restaurant/:id` | yes            | Deletes specific visited restaurant |
+
