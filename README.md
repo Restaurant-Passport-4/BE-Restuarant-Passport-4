@@ -26,7 +26,7 @@ _Delpoyed URL:_ TBD
     city: string, required
     address: string, required
     description: string, required
-    been_there: boolean default(false)
+    <!-- been_there: boolean default(false) -->
 }
 ```
 
@@ -58,23 +58,23 @@ _Delpoyed URL:_ TBD
 
 | Method | Endpoint          | Token Required | Description                                                                               |
 | ------ | ----------------- | -------------- | ----------------------------------------------------------------------------------------- |
-| GET    | `/restaurant`     | yes            | Returns all restaurants                                                                   |
-| POST   | `/restaurant`     | yes            | Requires name <br> Adds a restaurant to the database                                      |
-| POST   | `/restaurant/:id` | yes            | Requires name, city, address, description, city_id <br> Adds a restaurant to the database |
-| GET    | `/restaurant/:id` | yes            | Returns a restaurant by id                                                                |
+| GET    | `/restaurant`     | no             | Returns all restaurants                                                                   |
+| POST   | `/restaurant`     | no             | Requires name <br> Adds a restaurant to the database                                      |
+| POST   | `/restaurant/:id` | no             | Requires name, city, address, description, city_id <br> Adds a restaurant to the database |
+| GET    | `/restaurant/:id` | no             | Returns a restaurant by id                                                                |
 
 ### Cities Routes
 
-| Method | Endpoint                  | Token Required | Description                                                               |
+<!-- | Method | Endpoint                  | Token Required | Description                                                               |
 | ------ | ------------------------- | -------------- | ------------------------------------------------------------------------- |
-| GET    | `/cities/:id/restaurants` | yes            | Returns name and id of restaurants in a city by city id (for suggestions) |
+| GET    | `/cities/:id/restaurants` | yes            | Returns name and id of restaurants in a city by city id (for suggestions) | -->
 
 ### Passport Routes
 
-| Method | Endpoint                        | Token Required | Description                         |
-| ------ | ------------------------------- | -------------- | ----------------------------------- |
-| GET    | `/user/passport`                | yes            | Returns all visited restaurants     |
-| GET    | `/user/passport/restaurant/:id` | yes            | Returns specific visited restaurant |
-| POST   | `/user/passport/restaurant/:id` | yes            | Adds visited restaurant             |
-| PUT    | `/user/passport/restaurant/:id` | yes            | Updates specific visited restaurant |
-| DELETE | `/user/passport/restaurant/:id` | yes            | Deletes specific visited restaurant |
+| Method | Endpoint                               | Token Required | Description                         |
+| ------ | -------------------------------------- | -------------- | ----------------------------------- |
+| GET    | `/user/:userid/passport`               | yes            | Returns all visited restaurants     |
+| GET    | `/user/:userid/passport/:restaurantid` | yes            | Returns specific visited restaurant |
+| POST   | `/user/:userid/passport/:restaurantid` | yes            | Adds visited restaurant             |
+| PUT    | `/user/:userid/passport/:restaurantid` | yes            | Updates specific visited restaurant |
+| DELETE | `/user/:userid/passport/:restaurantid` | yes            | Deletes specific visited restaurant |
