@@ -49,10 +49,10 @@ _Delpoyed URL:_ TBD
 
 ### Auth Routes
 
-| Method | Endpoint         | Token Required | Description                                                                                                  |
-| ------ | ---------------- | -------------- | ------------------------------------------------------------------------------------------------------------ |
-| POST   | `/user/register` | no             | Registers a new user <br> Required: username, password, and department. <br>Returns id, username, and email. |
-| POST   | `/user/login`    | no             | Required: username and password<br> Signs in user and returns a token and userId                             |
+| Method | Endpoint         | Token Required | Description                                                                                                                 |
+| ------ | ---------------- | -------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| POST   | `/user/register` | no             | Registers a new user <br> Required: username, password, name, city, and email. <br>Returns id, username, name, city, email. |
+| POST   | `/user/login`    | no             | Required: username and password<br> Signs in user and returns a token and userId                                            |
 
 ### Restaurant Routes
 
