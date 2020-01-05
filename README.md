@@ -8,9 +8,9 @@ _Delpoyed URL:_
 
 ```
 {
-	id: integer, automatically generated
-	username: string, required
-	password: string, required
+    id: integer, automatically generated
+    username: string, required
+    password: string, required
     name: string, required
     email: string, required
     city: string, required
@@ -25,7 +25,7 @@ _Delpoyed URL:_
         name: string, required
     	city: string, required
     	address: string, required
-   	    description: string, required
+   	description: string, required
 }
 ```
 
