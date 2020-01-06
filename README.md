@@ -49,19 +49,18 @@ _Delpoyed URL:_ TBD
 
 ### Auth Routes
 
-| Method | Endpoint         | Token Required | Description                                                                                                                 |
-| ------ | ---------------- | -------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| POST   | `/user/register` | no             | Registers a new user <br> Required: username, password, name, city, and email. <br>Returns id, username, name, city, email. |
-| POST   | `/user/login`    | no             | Required: username and password<br> Signs in user and returns a token and userId                                            |
+| Method | Endpoint             | Token Required | Description                                                                                                                 |
+| ------ | -------------------- | -------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| POST   | `/api/auth/register` | no             | Registers a new user <br> Required: username, password, name, city, and email. <br>Returns id, username, name, city, email. |
+| POST   | `/api/auth/login`    | no             | Required: username and password<br> Signs in user and returns a token and userId                                            |
 
-### Restaurant Routes
+### Restaurants Routes
 
-| Method | Endpoint          | Token Required | Description                                                                               |
-| ------ | ----------------- | -------------- | ----------------------------------------------------------------------------------------- |
-| GET    | `/restaurant`     | no             | Returns all restaurants                                                                   |
-| POST   | `/restaurant`     | no             | Requires name <br> Adds a restaurant to the database                                      |
-| POST   | `/restaurant/:id` | no             | Requires name, city, address, description, city_id <br> Adds a restaurant to the database |
-| GET    | `/restaurant/:id` | no             | Returns a restaurant by id                                                                |
+| Method | Endpoint           | Token Required | Description                                                                               |
+| ------ | ------------------ | -------------- | ----------------------------------------------------------------------------------------- |
+| GET    | `/restaurants`     | no             | Returns all restaurants                                                                   |
+| POST   | `/restaurants/`    | no             | Requires name, city, address, description, city_id <br> Adds a restaurant to the database |
+| GET    | `/restaurants/:id` | no             | Returns a restaurant by id                                                                |
 
 ### Cities Routes
 
