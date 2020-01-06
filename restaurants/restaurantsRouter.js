@@ -1,6 +1,6 @@
 const express = require("express");
 
-const Restaurants = require("./restaurantModel.js");
+const Restaurants = require("./restaurantsModel.js");
 
 const router = express.Router();
 
@@ -26,6 +26,25 @@ router.post("/", (req, res) => {
       res.status(500).json({
         message: `Failed to create new restaurant`
       });
+    });
+});
+
+router.get("/:id", (req, res) => {
+  const { id } = req.params;
+
+  Restaurants.findById(id)
+    .then(restaurant => {
+      if (restaurant) {
+        res.json(restaurant);
+      } else {
+        res
+          .status(404)
+          .json({ message: "Could not find restaurant with given id." });
+      }
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json({ message: "Failed to get restaurant" });
     });
 });
 
