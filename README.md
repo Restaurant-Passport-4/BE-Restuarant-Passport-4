@@ -1,6 +1,6 @@
 # BE-UI-Restuarant-Passport-4
 
-_Delpoyed URL:_ TBD
+_Delpoyed URL:_ https://restaurant-passport-4.herokuapp.com/
 
 ## Models
 
@@ -26,12 +26,12 @@ _Delpoyed URL:_ TBD
     city: string, required
     address: string, required
     description: string, required
-    <!-- been_there: boolean default(false) -->
 }
 ```
 
 #### passport
 
+<!--
 ```
 {
     passport_id: integer, automatically generated
@@ -43,7 +43,7 @@ _Delpoyed URL:_ TBD
     notes: string, optional
     stamped: boolean default(false)
 }
-```
+``` -->
 
 ## End Points
 
@@ -56,11 +56,11 @@ _Delpoyed URL:_ TBD
 
 ### Restaurants Routes
 
-| Method | Endpoint           | Token Required | Description                                                                               |
-| ------ | ------------------ | -------------- | ----------------------------------------------------------------------------------------- |
-| GET    | `/restaurants`     | no             | Returns all restaurants                                                                   |
-| POST   | `/restaurants/`    | no             | Requires name, city, address, description, city_id <br> Adds a restaurant to the database |
-| GET    | `/restaurants/:id` | no             | Returns a restaurant by id                                                                |
+| Method | Endpoint               | Token Required | Description                                                                     |
+| ------ | ---------------------- | -------------- | ------------------------------------------------------------------------------- |
+| GET    | `/api/restaurants`     | no             | Returns all restaurants                                                         |
+| POST   | `/api/restaurants/`    | no             | Requires name, city, address, description<br> Adds a restaurant to the database |
+| GET    | `/api/restaurants/:id` | no             | Returns a restaurant by id                                                      |
 
 ### Cities Routes
 
@@ -70,10 +70,11 @@ _Delpoyed URL:_ TBD
 
 ### Passport Routes
 
-| Method | Endpoint                               | Token Required | Description                         |
-| ------ | -------------------------------------- | -------------- | ----------------------------------- |
-| GET    | `/user/:userid/passport`               | yes            | Returns all visited restaurants     |
-| GET    | `/user/:userid/passport/:restaurantid` | yes            | Returns specific visited restaurant |
-| POST   | `/user/:userid/passport/:restaurantid` | yes            | Adds visited restaurant             |
+| Method | Endpoint                | Token Required | Description                                              |
+| ------ | ----------------------- | -------------- | -------------------------------------------------------- |
+| GET    | `/api/passport/:userid` | yes            | Returns all visited restaurants                          |
+| POST   | `/api/passport/:userid` | yes            | Adds visited restaurant. Same format as restaurant model |
+
+<!-- | GET    | `/user/:userid/passport/:restaurantid` | yes            | Returns specific visited restaurant |
 | PUT    | `/user/:userid/passport/:restaurantid` | yes            | Updates specific visited restaurant |
-| DELETE | `/user/:userid/passport/:restaurantid` | yes            | Deletes specific visited restaurant |
+| DELETE | `/user/:userid/passport/:restaurantid` | yes            | Deletes specific visited restaurant | -->
