@@ -52,6 +52,7 @@ router.post("/:userid", restrictedMiddleware, (req, res) => {
     .then(user => {
       if (user) {
         Passport.addVisitedRestaurant(restaurantData).then(response => {
+          console.log("response", response);
           res.status(201).json({
             message: "this restaurant was added to your passport",
             restaurantData

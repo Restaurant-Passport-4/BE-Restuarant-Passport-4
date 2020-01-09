@@ -2,8 +2,8 @@ const knex = require("knex");
 const config = require("../knexfile.js");
 const db = knex(config.development);
 
-const findUserPassport = () => {
-  return db("passport"); // return master list of passport entries
+const findUserPassport = userid => {
+  return db("passport").where("id", userid); // return master list of passport entries
 };
 
 // const addVisitedRestaurant = res => {
@@ -20,7 +20,9 @@ const findUserPassport = () => {
 // };
 
 const addVisitedRestaurant = res => {
-  return db("passport").insert(res);
+  return db("passport")
+    .where("id", res.id)
+    .insert(res);
 };
 
 function getRestaurantById(id) {
